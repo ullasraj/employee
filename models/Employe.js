@@ -5,7 +5,8 @@ module.exports=(sequelize,DataTypes)=>{
     const Employe=sequelize.define("Employe",{
         Emp_Id:{
             type: DataTypes.INTEGER,
-            allowNull:false
+            allowNull:false,
+            primaryKey : true
         },
         Emp_Name : {
             type : DataTypes.STRING,
