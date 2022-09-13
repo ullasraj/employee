@@ -8,7 +8,7 @@ router.post("/new",(req,res)=>{
         Emp_Name : req.body.name,
         Emp_Email : req.body.Email,
         Emp_Postion : req.body.Position
-    }).then(()=>res.send("inserted"));
+    }).then(()=>res.send("inserted successfully"));
 })
 
 module.exports= router;

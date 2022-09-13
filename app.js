@@ -1,18 +1,16 @@
 const express= require("express");
 const bodyParser= require("body-parser");
 const db = require("./models");
+const employeRoutes =require("./routes/emp_routes");
 const PORT = process.env.PORT || 3000;
 const app=express();
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json());
 
-const employeRoutes =require("./routes/emp_routes");
+
+require("./connection");
 app.use("/employe",employeRoutes);
-
-db.sequelize.sync().then(()=>{
-    app.listen(PORT,()=>{
+app.listen(PORT,()=>{
         console.log("listerning ");
-    });
 });
-
