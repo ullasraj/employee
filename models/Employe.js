@@ -3,20 +3,20 @@ const { sequelize } = require(".");
 
 module.exports=(sequelize,DataTypes)=>{
     const Employe=sequelize.define("Employe",{
-        Emp_Id:{
+        emp_id:{
             type: DataTypes.INTEGER,
             allowNull:false,
             primaryKey : true
         },
-        Emp_Name : {
+        emp_name : {
             type : DataTypes.STRING,
             allowNull : false
         },
-        Emp_Email : {
+        emp_email : {
             type : DataTypes.STRING,
             allowNull:false
         },
-        Emp_Postion : {
+        emp_postion : {
             type :DataTypes.STRING,
             allowNull :false
         }
